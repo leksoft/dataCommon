@@ -43,9 +43,9 @@ class Common {
      */
     function dateThaiLong($strDate, $style = 0) {
         $strYear = date("Y", strtotime($strDate));
-        //$strYear = date("Y", strtotime($strDate)) + 543;
+       
         $strMonth = date("n", strtotime($strDate));
-        $strDay = $this->DataN(date("d", strtotime($strDate)));
+        $strDay = (int)date("d", strtotime($strDate));
         $strMonthCut = Array("", "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฏาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
         $strMonthThai = $strMonthCut[$strMonth];
 
@@ -59,7 +59,7 @@ class Common {
        
         $strYear = date("Y", strtotime($strDate)) + 543;
         $strMonth = date("n", strtotime($strDate));
-         $strDay = $this->DataN(date("d", strtotime($strDate)));
+        $strDay = (int)date("d", strtotime($strDate));
         $strMonthCut = Array("", "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฏาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
         $strMonthThai = $strMonthCut[$strMonth];
 
@@ -156,107 +156,7 @@ function num2wordsThai($num) {
     }
     return $returnNumWord;
 }
-    public function DataN($id){
-            switch ($id) {
-                case '01':
-                    return "1";
-                    break;
-                case '02':
-                    return "2";
-                    break;
-                case '03':
-                    return "3";
-                    break;
-                case '04':
-                    return "4";
-                    break;
-                case '05':
-                    return "5";
-                    break;
-                case '06':
-                    return "6";
-                    break;
-                case '07':
-                    return "7";
-                    break;
-                case '08':
-                    return "8";
-                    break;
-                case '09':
-                    return "9";
-                    break;
-                case '10':
-                    return "10";
-                    break;
-                case '11':
-                    return "11";
-                    break;
-                case '12':
-                   return "12";
-                    break;
-                case '13':
-                    return "13";
-                    break;
-                case '14':
-                    return "14";
-                    break;
-                case '15':
-                    return "15";
-                    break;
-                case '16':
-                    return "16";
-                    break;
-                case '17':
-                    return "17";
-                    break;
-                case '18':
-                    return "18";
-                    break;
-                case '19':
-                   return "19";
-                    break;
-                case '20':
-                    return "20";
-                    break;
-                case '21':
-                    return "21";
-                    break;
-                case '22':
-                    return "22";
-                    break;
-                case '23':
-                    return "23";
-                    break;
-                case '24':
-                    return "24";
-                    break;
-                case '25':
-                    return "25";
-                    break;
-                case '26':
-                   return "26";
-                    break;
-                case '27':
-                    return "27";
-                    break;
-                case '28':
-                    return "28";
-                    break;
-                case '29':
-                    return "29";
-                    break;
-                case '30':
-                   return "30";
-                    break;
-                case '31':
-                   return "31";
-                    break;
-                
-                default:
-                    return "99";
-                    break;
-            }
-    }
+    
 
     
 
